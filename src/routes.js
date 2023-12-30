@@ -4,7 +4,7 @@ import { BiUserCircle } from "react-icons/bi";
 import { AiOutlineBarChart } from "react-icons/ai";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 
-export default [
+const arr = [
     {
         to: '/',
         name: 'Home',
@@ -31,3 +31,5 @@ export default [
         Icon: AiOutlineBarChart
     }
 ];
+
+export default arr;

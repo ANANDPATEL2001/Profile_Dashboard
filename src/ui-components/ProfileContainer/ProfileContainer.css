@@ -62,8 +62,7 @@
 
 .account-details,
 .usage-metrics,
-.recent-activity,
-.saved-graphs {
+.recent-activity {
     align-content: start;
     text-align: left;
     flex: 1 1 300px;
@@ -78,12 +77,19 @@
     padding: 0;
 }
 
-/* .saved-graphs ul li {
-    margin: 1rem;
-} */
+.saved-graphs {
+    padding: 20px;
+    background-color: #e0e0e0;
+    align-content: center;
+    border-radius: 10px;
+}
+
+.saved-graphs h1 {
+    margin: 0.5rem;
+}
 
 .saved-chart {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     width: 100%;
     min-height: 300px;
     max-height: 450px;
@@ -117,9 +123,5 @@
     .saved-graphs {
         width: 100%;
         margin-bottom: 20px;
-    }
-
-    .saved-chart {
-        margin: 0 0.5rem;
     }
 }

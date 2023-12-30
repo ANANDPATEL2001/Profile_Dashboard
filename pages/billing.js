@@ -1,8 +1,10 @@
 import Layout from "../src/ui-components/layout";
 import Billing from "../src/Pages/billing";
 
-export default () => (
+const BillingPage = () => (
     <Layout>
         <Billing />
     </Layout>
 );
+
+export default BillingPage;

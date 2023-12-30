@@ -67,7 +67,7 @@ export default function Dashboard() {
       </Section>
 
       <Section>
-        <div style={{ "display": "flex" }}>
+        <div className="card-container">
           <Card
             heading="Bar Chart Example"
             subHeading="Lets see how data is ploting on chartjs"

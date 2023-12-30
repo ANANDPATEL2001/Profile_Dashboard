@@ -3,6 +3,7 @@ import FullButton from "@aio/components/FullButton";
 import Input from "@aio/components/Input";
 import Logo from "@aio/components/Logo";
 import styles from "./login.module.css";
+import { FaArrowLeft } from "react-icons/fa";
 
 const Login = () => {
   return (
