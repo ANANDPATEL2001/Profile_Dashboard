@@ -1,0 +1,169 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-fw: 700;
+    --primary-fs: 15px;
+    --primary-linear-gradient: hsl(298, 97%, 46%), hsl(237, 63%, 64%);
+    --neutral-very-light-grayish-blue: hsl(240, 78%, 98%);
+    --neutral-light-grayish-blue: hsl(234, 14%, 74%);
+    --neutral-grayish-blue: hsl(233, 13%, 49%);
+    --neutral-dark-grayish-blue: hsl(232, 13%, 33%);
+    --neutral-white: hsl(0, 0%, 100%);
+}
+
+
+.PricingApp {
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+    font-family: "inter", sans-serif;
+    font-weight: var(--primary-fw);
+    font-size: var(--primary-fs);
+    display: grid;
+    place-items: center;
+    /* background-color: var(--neutral-very-light-grayish-blue); */
+    background-color: var(--neutral-very-light-grayish-blue);
+    /* background-image: url("https://media.gettyimages.com/id/546011786/vector/network-connection-abstract-background.jpg?s=2048x2048&w=gi&k=20&c=4v66CsOGJhY16iXoVkYR5sST-qYCKq1iKTIZCIfLlVY="); */
+    background-image: url("../../../public/pricing-bg-image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-size: 375px 658px; */
+    z-index: 0;
+}
+
+.PricingApp::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 353px;
+    width: 100%;
+    height: 304px;
+    /* background-image: url("https://t4.ftcdn.net/jpg/00/48/50/07/360_F_48500766_vRIy81MmQQgueFZqyzHPvDOOujHtLFi6.jpg"); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+}
+
+button {
+    font-family: "inter", sans-serif;
+    font-weight: var(--primary-fw);
+    font-size: var(--primary-fs);
+}
+
+/*toggle*/
+.PricingApp .price-switch {
+    --border-radius: 10em;
+    display: block;
+    width: 50px;
+    height: 25px;
+    border-radius: var(--border-radius);
+    position: relative;
+    cursor: pointer;
+}
+
+.PricingApp .price-checkbox {
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.PricingApp .switch-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 25px;
+    border-radius: var(--border-radius);
+    background-image: linear-gradient(to right, rgb(14, 64, 228), rgb(0, 255, 38));
+}
+
+.PricingApp .switch-slider:is(:hover, :focus-visible) {
+    opacity: 0.7;
+}
+
+.PricingApp .switch-slider::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    width: 20px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    background-color: var(--neutral-very-light-grayish-blue);
+    transform: translateX(calc(100% + 2px));
+    transition: 0.3s ease;
+}
+
+.PricingApp .price-checkbox:checked+.switch-slider::before {
+    transform: translateX(0%);
+}
+
+/*------*/
+
+.PricingApp .app-container {
+    width: min(95%, 70rem);
+}
+
+.PricingApp .header-topic {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+}
+
+.header-sub-topic {
+    color: white;
+}
+
+.PricingApp .header-row {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.PricingApp .pricing-cards {
+    gap: 0.8rem;
+    margin-top: 4em;
+    min-height: 30rem;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1100px) {
+    .PricingApp .pricing-cards {
+        /* flex-direction: column; */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .PricingApp {
+        padding: 0 50px;
+    }
+
+    .PricingApp .pricing-cards {
+        /* flex-direction: column; */
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2em;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .PricingApp {
+        padding: 0 20px;
+    }
+}

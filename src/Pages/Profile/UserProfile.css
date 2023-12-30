@@ -1,0 +1,48 @@
+/* UserProfile.css */
+
+.user-profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details {
+    text-align: center;
+}
+
+.profile-details img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.account-details,
+.usage-metrics,
+.recent-activity,
+.saved-graphs,
+.user-actions,
+.links {
+    margin-top: 20px;
+}
+
+.user-actions button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* Add more specific styles as needed for each section */

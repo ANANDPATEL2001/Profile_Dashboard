@@ -1,0 +1,125 @@
+/* UserProfile.css */
+
+.user-profile-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 5px;
+    font-family: 'inter', sans-serif;
+}
+
+.user-details {
+    /* flex: 1 1 300px; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    gap: 1rem;
+}
+
+.profile-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    padding: 5px;
+    font-family: 'inter', sans-serif;
+}
+
+.user-details img {
+    /* width: 100px; */
+    border-radius: 50%;
+}
+
+.account-details {
+    background: url("https://media.istockphoto.com/id/1136393786/photo/woman-typing-keyboard-laptop-and-account-login-screen-on-the-working-in-the-office-on-table.jpg?s=612x612&w=0&k=20&c=tWV0L3dDzPor2VdFrHyOk57pqH8lDcHhLHzOwuVvTvg=");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.usage-metrics {
+    background: url("https://image.slidesdocs.com/responsive-images/background/computer-graphics-colorful-barra-powerpoint-background_bf84381f0a__960_540.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.recent-activity {
+    background: url("https://png.pngtree.com/background/20230524/original/pngtree-market-chart-concept-in-the-form-of-a-line-graph-picture-image_2710351.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.account-details,
+.usage-metrics,
+.recent-activity,
+.saved-graphs {
+    align-content: start;
+    text-align: left;
+    flex: 1 1 300px;
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.action-buttons,
+.saved-graphs ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* .saved-graphs ul li {
+    margin: 1rem;
+} */
+
+.saved-chart {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 300px;
+    max-height: 450px;
+}
+
+.saved-graphs ul li {
+    margin: 1rem;
+}
+
+.saved-graphs img {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.navigation-links {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Media Query for Responsiveness */
+@media screen and (max-width: 768px) {
+    .user-profile-container {
+        flex-direction: column;
+    }
+
+    .user-details,
+    .account-details,
+    .usage-metrics,
+    .recent-activity,
+    .saved-graphs {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .saved-chart {
+        margin: 0 0.5rem;
+    }
+}
